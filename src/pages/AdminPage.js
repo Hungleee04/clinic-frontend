@@ -11,7 +11,7 @@ export const AdminPage = ({ user }) => {
             // Chờ 2 giây rồi redirect
             const timer = setTimeout(() => {
                 navigate("/");
-            }, 2000);
+            }, 5000);
 
             return () => clearTimeout(timer); // Xoá timer nếu component unmount
         }

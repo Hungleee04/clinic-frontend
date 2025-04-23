@@ -1,5 +1,8 @@
-import {Link, Routes, useNavigate} from "react-router-dom";
+import {Link, Route, Routes, useNavigate} from "react-router-dom";
 import {useState} from "react";
+import {HomePage} from "./pages/HomePage";
+import {LoginPage} from "./pages/LoginPage";
+import {AdminPage} from "./pages/AdminPage";
 
 export const AppLayout =() =>{
     const [user, setUser] = useState();
@@ -23,7 +26,11 @@ export const AppLayout =() =>{
                 </ul>
             </nav>
             <Routes>
-
+                <Route path="/login" element={<LoginPage />} />
+                <Route path="/" element={<HomePage />}/>
+                <Route path ="/admin" element = {<AdminPage user={setUser}/>}>
+                    <Route></Route>
+                </Route>
             </Routes>
 
         </>
