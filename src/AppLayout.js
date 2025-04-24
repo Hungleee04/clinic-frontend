@@ -26,9 +26,9 @@ export const AppLayout =() =>{
                 </ul>
             </nav>
             <Routes>
-                <Route path="/login" element={<LoginPage />} />
+                <Route path="/login" element={<LoginPage onLogin={setUser}  />} />
                 <Route path="/" element={<HomePage />}/>
-                <Route path ="/admin" element = {<AdminPage user={setUser}/>}>
+                <Route path ="/admin" element = {<AdminPage />}>
                     <Route></Route>
                 </Route>
             </Routes>
